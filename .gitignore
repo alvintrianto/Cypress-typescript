@@ -1,5 +1,7 @@
-/vs/
-/node_modules/
-./videos/
-/report
-./screenshoot/
+vs
+node_modules
+videos
+reports
+screenshoot
+package-lock.json
+yarn.lock
