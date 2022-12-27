@@ -1,5 +1,5 @@
 /vs/
 /node_modules/
 /cypress/videos/
-/cypress/report
+/cypress/reports
 /cypress/screenshoot/
