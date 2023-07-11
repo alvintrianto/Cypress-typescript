@@ -18,5 +18,8 @@ open cypress dashboard
 ```bash
 npx cypress open
 ```
+Here screen record for run the test : 
+
+https://drive.google.com/file/d/1Ph2nHsfhiZyRhksMiCXC8rVBogBwpu8N/view?usp=sharing
 
 ### Thanks pau
