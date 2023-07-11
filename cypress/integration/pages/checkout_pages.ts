@@ -11,6 +11,9 @@ export class CheckoutPage {
   btn_finish = '#finish'
   btn_back_to_home = '#back-to-products'
   txt_alert_empty_name = 'Error: First Name is required'
+  txt_alert_error = '[data-test="error"]'
+  text_complete_header = '.complete-header'
+  text_complete_text = '.complete-text'
 
   clickAddtoCart() {
     cy.get(this.btn_add_to_cart).click()
@@ -53,14 +56,14 @@ export class CheckoutPage {
 
   assertSuccessCheckout() {
     cy.get(this.btn_back_to_home).should('be.visible')
-    cy.get('.complete-header').should('be.visible')
-    cy.get('.complete-text').should('be.visible')
+    cy.get(this.text_complete_header).should('be.visible')
+    cy.get(this.text_complete_text).should('be.visible')
 
   }
 
   assertNameInformationFail() {
-    cy.get('[data-test="error"]').should('be.visible')
-    cy.get('[data-test="error"]').should('contain', this.txt_alert_empty_name)
+    cy.get(this.txt_alert_error).should('be.visible')
+    cy.get(this.txt_alert_error).should('contain', this.txt_alert_empty_name)
   }
 
   add_to_cart() {
