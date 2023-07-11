@@ -23,6 +23,7 @@ export class LoginPage {
     }
     assertLoginFail() {
         cy.get('[data-test="error"]').should('be.visible')
+        cy.get('[data-test="error"]').should('contain', 'Epic sadface: Username and password do not match any user in this service')
     }
     login(url: string, username: string, password: string) {
         this.navigate(url)
