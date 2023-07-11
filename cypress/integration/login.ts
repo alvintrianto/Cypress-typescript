@@ -5,17 +5,17 @@ let loginPage = new LoginPage()
 let dashboardPage = new DashboardPage()
 const URL = 'https://www.saucedemo.com'
 
-it('Test LOGIN', () => {
+it('User successfully login with valid username and password ', () => {
     loginPage.login(URL, 'standard_user', 'secret_sauce')
     loginPage.assertLogin()
 })
 
-it('Test Sauce Demo Invalid Password', () => {
+it('User fail to login when field password is incorrect', () => {
     loginPage.login(URL, 'standard_user', 'invalidPass')
     loginPage.assertLoginFail()
 })
 
-it('Test Sauce Demo Sauce labs product backpack', () => {
+it('User view detail product', () => {
     loginPage.login(URL, 'standard_user', 'secret_sauce')
     loginPage.assertLogin()
     dashboardPage.sauceLabsBackpack()
