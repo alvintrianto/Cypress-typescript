@@ -1,5 +1,5 @@
-import {LoginPage} from "./pages/login_pages"
-import {DashboardPage} from "./pages/dashboard_pages"
+import {LoginPage} from "./pages/login_pages.cy.js"
+import {DashboardPage} from "./pages/dashboard_pages.cy.js"
 
 let loginPage = new LoginPage()
 let dashboardPage = new DashboardPage()
