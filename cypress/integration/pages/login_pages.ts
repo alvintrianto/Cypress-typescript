@@ -19,11 +19,12 @@ export class LoginPage{
     }
     assertLogin(){
         cy.get('.title').should('be.visible')
-        cy.get('.peek').should('be.visible')
+        cy.get('.app_logo').should('be.visible')
         cy.contains('Products').should('contain','Products')
     }
     assertLoginFail(){
         cy.get('[data-test="error"]').should('be.visible')
+        cy.contains('Epic sadface: Username and password do not match any user in this service')
     }
     login(url : string,username : string,password : string){
         this.navigate(url)

@@ -3,6 +3,7 @@ import {DashboardPage} from "./pages/dashboard_pages"
 
 let loginPage = new LoginPage()
 let dashboardPage = new DashboardPage()
+
 const URL = 'https://www.saucedemo.com/'
 
 it('Test LOGIN', () => {
@@ -15,8 +16,14 @@ it('Test Sauce Demo Invalid Password', () => {
     loginPage.assertLoginFail()
 })
 
+it('Test Sauce Demo Invalid Username', () => {
+    loginPage.login(URL,'standard_sauce','secret_sauce')
+    loginPage.assertLoginFail()
+})
+
 it('Test Sauce Demo Sauce labs product backpack', () => {
     loginPage.login(URL,'standard_user','secret_sauce')
     loginPage.assertLogin()
     dashboardPage.sauceLabsBackpack() 
 })
+
